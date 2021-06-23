@@ -9,9 +9,3 @@ DB_PASSWORD = 'qwert5656'
 DB_DATABASE = 'u0981115_itsunrise'
 DB_CHARSET = 'utf8mb4'
 
-#формат 
-FORMAT_USER_DATA = {
-    'id':'',
-    'name':'',
-    'valk':''
-}
