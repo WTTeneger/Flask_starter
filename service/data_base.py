@@ -1,5 +1,9 @@
 import pymysql
+from settings import env
+# print()
+
 class DB():
+    
     """Работа с Базой данных
     получить данные::
 
@@ -12,8 +16,8 @@ class DB():
     def GET(self):
         """Получает данные с Базы данных
         """
-        connection = pymysql.connect(host="31.31.196.245", user='u0981115',
-                                     password='qwert5656', database='u0981115_itsunrise', charset="utf8mb4")
+        connection = pymysql.connect(host=env.DB_HOST, user=env.DB_USER,
+                                     password=env.DB_PASSWORD, database=env.DB_DATABASE, charset=env.DB_CHARSET)
         cursor = connection.cursor()
         cursor.execute(self)
         OTV = cursor.fetchall()
@@ -22,9 +26,12 @@ class DB():
     def POST(self):
         """Отправляет данные в Базу данных
         """
-        connection = pymysql.connect(host="31.31.196.245", user='u0981115',
-                                     password='qwert5656', database='u0981115_itsunrise', charset="utf8")
+        connection = pymysql.connect(host=env.DB_HOST, user=env.DB_USER,
+                                     password=env.DB_PASSWORD, database=env.DB_DATABASE, charset=env.DB_CHARSET)
         cursor = connection.cursor()
         cursor.execute(self)
         connection.commit()
         return('True')
+    
+def test():
+    print(env.DB_DATABASE)

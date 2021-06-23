@@ -4,7 +4,7 @@ from service import JWT
 from app import *
 
 from settings import env
-tokin_service = JWT.tokinService(env)
+# tokin_service = JWT.tokinService(env)
 
 
 # resp.set_cookie('sessionID', '', expires=0)   #Сбросить куки
