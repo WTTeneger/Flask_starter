@@ -1,4 +1,4 @@
 #!flask/bin/python
-from app import app 
+from app import socketio, app
 
-app.run(debug = True)
+socketio.run(app)

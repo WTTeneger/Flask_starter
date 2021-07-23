@@ -3,9 +3,9 @@ JWT_ACCESS_SECRET = 'JWT_ACC'
 JWT_REFRESH_SECRET = 'JWT_REF'
 
 # База данных
-DB_HOST = '31.31.196.245'
-DB_USER = 'u0981115'
-DB_PASSWORD = 'qwert5656'
-DB_DATABASE = 'u0981115_itsunrise'
+DB_HOST = '37.140.192.90'
+DB_USER = 'u1102095_share'
+DB_PASSWORD = 'share_db'
+DB_DATABASE = 'u1102095_share_db'
 DB_CHARSET = 'utf8mb4'
 
