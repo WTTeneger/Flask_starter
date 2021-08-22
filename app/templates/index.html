@@ -10,6 +10,8 @@
 
 <body>
     <H1>Yash</H1>
+    <input type="text" id="inp1" placeholder="Username">
+    <input type="text" id="inp2" placeholder="Room">
     <button onclick="sender('1_1')">Отправить</button>
     <button onclick="sender('2_1')">В группу</button>
     <button onclick="sender('2_2')">Из группы</button>
@@ -48,23 +50,23 @@
             }
             if (ex == '2_1') {
                 socket.emit('join', {
-                    username: 'max',
-                    room: 'bar'
+                    username: document.getElementById('inp1').value,
+                    room: document.getElementById('inp2').value,
 
                 });
             }
 
             if (ex == '2_2') {
                 socket.emit('leave', {
-                    username: 'max',
-                    room: 'bar'
+                    username: document.getElementById('inp1').value,
+                    room: document.getElementById('inp2').value,
 
                 });
             }
             if (ex == '2_3') {
                 socket.emit('send_room', {
-                    username: 'max',
-                    room: 'bar',
+                    username: document.getElementById('inp1').value,
+                    room: document.getElementById('inp2').value,
                     message: 'mes'
 
                 });
