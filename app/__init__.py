@@ -13,7 +13,7 @@ DB = data_base.DB
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
-app.debug = True
+app.debug = False
 CORS(app)
 socketio = SocketIO(app)
 socketio.run(app)
