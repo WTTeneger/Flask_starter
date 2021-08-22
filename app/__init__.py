@@ -7,7 +7,7 @@ from settings import env
 
 from flask import *
 from flask_cors import CORS
-from flask_socketio import SocketIO, emit, join_room, leave_room, send
+from flask_socketio import SocketIO, emit, join_room, leave_room, send, rooms
 DB = data_base.DB
 
 
