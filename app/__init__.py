@@ -16,4 +16,5 @@ app.config['SECRET_KEY'] = 'secret!'
 app.debug = True
 CORS(app)
 socketio = SocketIO(app)
+socketio.run(app)
 from app import views, api, errors, socket_f
